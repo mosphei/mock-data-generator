@@ -29,3 +29,8 @@ export function pickRandomItems(_items: any[], _count = 1) {
     }
     return retval;
 }
+export function theQuickBrownFox(length = 1): string {
+    const sentence = `The quick brown fox jumped over the lazy dog.`
+    const retval = Array.apply(null, new Array(length)).map(()=> sentence);
+    return retval.join(' ');
+}
