@@ -20,8 +20,8 @@ export function nameGenerator(length: number): {Lastname: string, Firstname: str
     }
     return retval;
 }
-function randomLetter():string { return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('')[Math.floor(Math.random()*26)];}
-function pickRandomItems(_items: any[], _count = 1) {
+export function randomLetter():string { return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('')[Math.floor(Math.random()*26)];}
+export function pickRandomItems(_items: any[], _count = 1) {
     if (!_count) { _count = 1; }
     const retval = _items.slice();
     while (retval.length > _count && retval.length > 0) {
