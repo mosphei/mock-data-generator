@@ -1,3 +1,5 @@
+import { Literature } from "./literature";
+
 /**
  * returns an array of names
  * @param length number of names to return
@@ -31,6 +33,11 @@ export function pickRandomItems(_items: any[], _count = 1) {
 }
 export function theQuickBrownFox(length = 1): string {
     const sentence = `The quick brown fox jumped over the lazy dog.`
-    const retval = Array.apply(null, new Array(length)).map(()=> sentence);
+    const retval = new Array(length).fill(sentence);
     return retval.join(' ');
+}
+
+const alice = new Literature();
+export function aliceSentence(low: number, high: number) {
+    return alice.sentence(low, high);
 }
