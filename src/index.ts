@@ -1,5 +1,4 @@
-import { Literature } from "./literature";
-
+import { Alice } from "./alice";
 /**
  * returns an array of names
  * @param length number of names to return
@@ -37,7 +36,7 @@ export function theQuickBrownFox(length = 1): string {
     return retval.join(' ');
 }
 
-const alice = new Literature();
+const alice = new Alice();
 export function aliceSentence(low: number, high: number) {
     return alice.sentence(low, high);
 }
