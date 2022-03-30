@@ -40,3 +40,10 @@ const alice = new Alice();
 export function aliceSentence(low: number, high: number) {
     return alice.sentence(low, high);
 }
+
+export function rndUpTo(_max: number = 10) {
+    return Math.ceil(Math.random()*_max);
+}
+export function randomDate(start:Date, end:Date) {
+    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+}
